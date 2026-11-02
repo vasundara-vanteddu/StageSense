@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #07111F;
+  --color-navy-900: #0B1A2D;
+  --color-ocean-800: #10243B;
+  --color-ocean-700: #17324F;
+  --color-steel-600: #365D82;
+  --color-atmos-500: #537FA5;
+  --color-cyan-400: #79C8DF;
+  --color-cyan-300: #A5DCEC;
+  --color-icy-100: #DCEFF8;
+  --color-white: #F7FAFC;
+  --color-slate-400: #9AAFC2;
+  --color-slate-500: #7C93A9;
+  --color-slate-600: #4D647A;
+  --color-state-strong: #6FE3B8;
+  --color-state-strong-text: #8FEBC9;
+  --color-state-weak: #F2B75B;
+  --color-state-weak-text: #F6C77F;
+  --color-state-severe: #F2766B;
+  --color-state-severe-text: #F8978D;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'DM Mono', monospace;
+  --font-serif: 'Fraunces', serif;
+}
+
+:root {
+  --navy-950: #07111F;
+  --navy-900: #0B1A2D;
+  --ocean-800: #10243B;
+  --ocean-700: #17324F;
+  --steel-600: #365D82;
+  --atmos-500: #537FA5;
+  --cyan-400: #79C8DF;
+  --cyan-300: #A5DCEC;
+  --icy-100: #DCEFF8;
+  --white: #F7FAFC;
+  --slate-400: #9AAFC2;
+  --slate-500: #7C93A9;
+  --slate-600: #4D647A;
+  --border: rgba(190, 220, 245, 0.18);
+  --border-strong: rgba(190, 220, 245, 0.32);
+
+  --state-strong: #6FE3B8;
+  --state-strong-text: #8FEBC9;
+  --state-weak: #F2B75B;
+  --state-weak-text: #F6C77F;
+  --state-severe: #F2766B;
+  --state-severe-text: #F8978D;
+  --state-normal: rgba(121, 200, 223, 0.20);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--navy-950);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* 45 degree hatch pattern for severe state */
+.hatch-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(242, 118, 107, 0.85),
+    rgba(242, 118, 107, 0.85) 3px,
+    rgba(242, 118, 107, 0.3) 3px,
+    rgba(242, 118, 107, 0.3) 6px
+  );
+}
+
+.hatch-pattern-subtle {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(242, 118, 107, 0.35),
+    rgba(242, 118, 107, 0.35) 2px,
+    transparent 2px,
+    transparent 5px
+  );
+}
+
+/* Tabular nums */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07111F;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(121, 200, 223, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(121, 200, 223, 0.45);
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print, header, nav, .floating-nav, .video-player-controls, footer {
+    display: none !important;
+  }
+  .print-expand {
+    display: block !important;
+    width: 100% !important;
+  }
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}

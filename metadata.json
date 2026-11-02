@@ -1,0 +1,6 @@
+{
+  "name": "StageSense",
+  "description": "Multimodal presentation delivery assessment platform. Lays your pace, voice, pauses, hands, posture, and focus along one synchronized rehearsal timeline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

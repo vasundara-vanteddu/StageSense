@@ -1,0 +1,51 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local databases and generated data
+storage/jobs/
+storage/*.db
+*.sqlite
+*.sqlite3
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.idea/
+
+# Local video test recordings
+*.mp4
+*.webm
+*.mov
+*.mkv
+
+# Local diagnostic output
+inspect_outputs.txt
+
+# Generated storage data
+storage/jobs/
+storage/*.db
+storage/*.sqlite
+storage/*.sqlite3
+storage/*.wav
+storage/*.mp4
+storage/*.webm
+
+# Keep required MediaPipe model
+!storage/models/
+!storage/models/*.task
